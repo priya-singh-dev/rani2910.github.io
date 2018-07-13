@@ -1,0 +1,307 @@
+:root {
+    font-size: 16px; }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* navbar styling */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    /* background-color: transparent; */
+    
+}
+
+
+nav.header 
+{
+    background: rgba(0, 0.5, 0, 0.5);
+    height: 80px;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+nav .logo{
+    float: left;
+}
+
+nav .logo img
+{
+    height: 80px;
+    transition: .5s;
+}
+nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a {
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 20px;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+nav.header ul li a {
+    color: orange;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color:fff;
+    background: #f00089;
+}
+/* end navbar styling */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+
+.container.content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(128, 46, 103, 0.5); /* background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+} 
+
+.sec1 {
+    width:100%;
+    height:100vh;
+    background: url(images/study.jpg);
+    background-size: cover;
+    margin:0 auto;
+    /* background-color: rgba(128, 46, 103, 0.5); */
+}
+
+
+/*  header styling  */
+ .heading {
+    color: lawngreen;
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1vh;
+    padding: 5vw;
+}
+
+.btn {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    color: #35eea4;
+    font-family: "Istok Web", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 8px;
+    margin-top: 2vh;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: box-shadow 0.3s linear 0.1s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 20px 0 #35eea4;
+}
+
+/* end header styling  */
+
+
+/* section media */
+section {
+    /* border-bottom: 1px solid #999; */
+     text-align: center;
+    padding: 100px 0 0;
+    height: 600px;
+    width: 100%;
+
+  }
+  
+
+/* end section media */
+
+
+  h1 {
+    margin-bottom: .5em;
+    text-transform: uppercase;
+
+
+  }
+  
+  p {
+    width: 90%;
+    /* margin: 0 auto; */
+
+  }
+  
+/*Styling of About section*/
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5vh;
+    margin: 5vw;
+
+}
+
+.row .my-image {
+    border: 1px solid #35eea4;
+    border-radius: 50%;
+    box-shadow: 0px 3px 20px 2px #2c2c2c;
+    width: 25vw;
+    height: 15vm;
+}
+
+.paragraph {
+    color: #2c2c2c;
+    font-family: "Istok Web", sans-serif;
+    padding: 5vw 5vw 5vw 0;
+}
+
+.icon-group {
+    margin-top: 2vh;
+}
+
+.icon-group .icon {
+    margin-right: 10px;
+    width: 25px;
+}
+/* end of About*/
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    height: 25%; 
+
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    
+    padding: 10px;
+
+}
+.set {
+    width:25px;
+    height:200px;
+    background-color: transparent;
+    border-radius: 2em;
+}
+/*  projects */
+
+#projects {
+    background-color: chocolate;
+    height: 25%;
+}
+
+#interests {
+    background-color: rosybrown;
+}
+#about {
+  background-color: tomato;  /* background with transparency */
+
+}
+#experience {
+    background-color: aquamarine;
+}
+
+/* footer */
+.footer {
+    
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+
+.icon-group1 .icon {
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+/* end footer */
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 726px) {
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
+    }
+  
+}
+
+    @media only screen and (max-width: 725px) {
+        .row {
+            flex-direction: column;
+        }
+        .row .image {
+            order: -1;
+            width: 100%;
+        }
+        .row .my-image {
+            width: 60vw;
+        }
+        .sec1 {
+            width: 80vm;
+    
+        }
+        .header.item {
+            flex-direction:row;
+        }
+        .sections {
+            flex-direction: column;
+        }
+        
+        .column {
+            width: 100%;
+        }
+        .sections {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+/* end media queries*/
